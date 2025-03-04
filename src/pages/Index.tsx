@@ -4,11 +4,31 @@ import AutomationCard from "@/components/AutomationCard";
 import FeaturedAutomations from "@/components/FeaturedAutomations";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toolCategories } from "@/data/toolCategories";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { automations } from "@/data/automations";
 import ChatBot from "@/components/ChatBot";
+import { getUserDataFromUrl } from '@/components/captureLogin';
+
+const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/d38kg7nnqsclk9aqeb14qsfkvfvsuruv";
 
 const Index = () => {
+
+    useEffect(() => {
+        const userData = getUserDataFromUrl();
+        console.log("Extracted User Data:", userData);
+        // Send data to Make.com Webhook
+        fetch(MAKE_WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData)
+        })
+        .then(response => response.json())
+        .then(data => console.log("Make.com Response:", data))
+        .catch(error => console.error("Error:", error));
+        
+    }, []);
+
+
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
