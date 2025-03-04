@@ -16,15 +16,15 @@ const Index = () => {
    
     useEffect(() => {
         const userData = getUserDataFromUrl();
-        console.log("Extracted User Data:", userData);
+        // console.log("Extracted User Data:", userData);
         // Send data to Make.com Webhook
         fetch(MAKE_WEBHOOK_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userData)
         })
-        .then(response => response.json())
-        .then(data => console.log("Make.com Response:", data))
+        .then(response => response.text())
+        // .then(data => console.log("Make.com Response:", data))
         .catch(error => console.error("Error:", error));
         
     }, []);
@@ -60,8 +60,8 @@ const Index = () => {
     ? filteredAutomations.filter(automation => !featuredAutomations.includes(automation))
     : filteredAutomations.slice(3);
 
-  console.log('Selected Tools:', selectedTools);
-  console.log('Filtered Automations:', filteredAutomations);
+  // console.log('Selected Tools:', selectedTools);
+  // console.log('Filtered Automations:', filteredAutomations);
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
