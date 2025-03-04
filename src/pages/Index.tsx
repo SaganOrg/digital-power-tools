@@ -13,6 +13,7 @@ const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/d38kg7nnqsclk9aqeb14qsfkvfvs
 
 const Index = () => {
 
+   
     useEffect(() => {
         const userData = getUserDataFromUrl();
         console.log("Extracted User Data:", userData);
