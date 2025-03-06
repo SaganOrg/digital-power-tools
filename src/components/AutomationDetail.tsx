@@ -44,7 +44,24 @@ const workflowSteps = {
       icon: Database
     }
   ],
-  "lead-qualification": [
+  // "lead-qualification": [
+  //   {
+  //     title: "Lead Entry",
+  //     description: "New lead information is received",
+  //     icon: Users
+  //   },
+  //   {
+  //     title: "AI Scoring",
+  //     description: "AI analyzes lead data against qualification criteria",
+  //     icon: BrainCircuit
+  //   },
+  //   {
+  //     title: "Team Assignment",
+  //     description: "Qualified leads are assigned to sales team with notifications",
+  //     icon: MessageSquare
+  //   }
+  // ],
+  "Slack Bot": [
     {
       title: "Lead Entry",
       description: "New lead information is received",
