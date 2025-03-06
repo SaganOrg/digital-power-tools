@@ -1,4 +1,4 @@
-import { PhoneCall, Users, Calendar, Bell, FileText } from "lucide-react";
+import { PhoneCall, Users, Calendar, Bell, FileText, Bot } from "lucide-react";
 import { Automation } from "./types";
 
 export const salesAutomations: Automation[] = [
@@ -20,14 +20,23 @@ export const salesAutomations: Automation[] = [
     category: "Sales",
     tools: ["HubSpot", "Fireflies.ai", "Slack"]
   },
+  // {
+  //   title: "Lead Qualification Pipeline",
+  //   description: "AI-powered lead analysis and qualification with instant Slack notifications and CRM integration.",
+  //   icon: Users,
+  //   iconBg: "bg-green-100",
+  //   link: "/lead-qualification",
+  //   category: "Sales",
+  //   tools: ["Gmail", "HubSpot", "Slack"]
+  // },
   {
-    title: "Lead Qualification Pipeline",
-    description: "AI-powered lead analysis and qualification with instant Slack notifications and CRM integration.",
-    icon: Users,
-    iconBg: "bg-green-100",
-    link: "/lead-qualification",
+    title: "SlackBot",
+    description: "An AI-powered Slack app enabling team-wide ChatGPT/Claude access, contextual responses, workflow optimization, and AI-tracked interactions for improved documentation, collaboration, and SOP creation.",
+    icon: Bot,
+    iconBg: "bg-purple-100",
+    link: "/Slack Bot",
     category: "Sales",
-    tools: ["Gmail", "HubSpot", "Slack"]
+    tools: ["Slack", "ChatGPT", "Claude"]
   },
   {
     title: "Customer Support Escalation",

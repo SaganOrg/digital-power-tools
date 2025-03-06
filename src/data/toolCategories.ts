@@ -10,115 +10,115 @@ export const toolCategories: ToolCategory[] = [
   {
     name: "Communication & Collaboration",
     tools: [
-      { name: "Gmail/Google Workspace", isPriority: true },
-      { name: "Slack", isPriority: true },
-      { name: "Microsoft Teams", isPriority: false },
-      { name: "Zoom", isPriority: false },
-      { name: "Microsoft 365/Outlook", isPriority: true }
+      { name: "Gmail/Google Workspace",  },
+      { name: "Slack",  },
+      { name: "Microsoft Teams",  },
+      { name: "Zoom",  },
+      { name: "Microsoft 365/Outlook",  }
     ]
   },
   {
     name: "CRM & Sales",
     tools: [
-      { name: "HubSpot", isPriority: true },
-      { name: "Pipedrive", isPriority: true },
-      { name: "Zoho CRM", isPriority: false },
-      { name: "GoHighLevel", isPriority: true },
-      { name: "ClickUp", isPriority: true }
+      { name: "HubSpot",  },
+      { name: "Pipedrive",  },
+      { name: "Zoho CRM",  },
+      { name: "GoHighLevel",  },
+      { name: "ClickUp",  }
     ]
   },
   {
     name: "Project Management",
     tools: [
-      { name: "Asana", isPriority: true },
-      { name: "Trello", isPriority: false },
-      { name: "ClickUp", isPriority: true },
-      { name: "Monday.com", isPriority: true },
-      { name: "Notion", isPriority: false }
+      { name: "Asana",  },
+      { name: "Trello",  },
+      { name: "ClickUp",  },
+      { name: "Monday.com",  },
+      { name: "Notion",  }
     ]
   },
   {
     name: "Forms & Data Collection",
     tools: [
-      { name: "Google Forms", isPriority: true },
-      { name: "Typeform", isPriority: false },
-      { name: "JotForm", isPriority: false },
-      { name: "Airtable", isPriority: true },
-      { name: "Microsoft Forms", isPriority: false }
+      { name: "Google Forms",  },
+      { name: "Typeform",  },
+      { name: "JotForm",  },
+      { name: "Airtable",  },
+      { name: "Microsoft Forms",  }
     ]
   },
   {
     name: "Document Management",
     tools: [
-      { name: "Google Drive", isPriority: true },
-      { name: "Dropbox", isPriority: false },
-      { name: "OneDrive", isPriority: false },
-      { name: "Box", isPriority: false }
+      { name: "Google Drive",  },
+      { name: "Dropbox",  },
+      { name: "OneDrive",  },
+      { name: "Box",  }
     ]
   },
   {
     name: "Accounting & Financial",
     tools: [
-      { name: "QuickBooks Online", isPriority: true },
-      { name: "Xero", isPriority: true },
-      { name: "FreshBooks", isPriority: false },
-      { name: "Stripe", isPriority: true },
-      { name: "Square", isPriority: false }
+      { name: "QuickBooks Online",  },
+      { name: "Xero",  },
+      { name: "FreshBooks",  },
+      { name: "Stripe",  },
+      { name: "Square",  }
     ]
   },
   {
     name: "Marketing & Social",
     tools: [
-      { name: "Mailchimp", isPriority: true },
-      { name: "ActiveCampaign", isPriority: false },
-      { name: "LinkedIn", isPriority: false },
-      { name: "Facebook/Instagram", isPriority: true },
-      { name: "Twitter", isPriority: false },
-      { name: "Klaviyo", isPriority: false }
+      { name: "Mailchimp",  },
+      { name: "ActiveCampaign",  },
+      { name: "LinkedIn",  },
+      { name: "Facebook/Instagram",  },
+      { name: "Twitter",  },
+      { name: "Klaviyo",  }
     ]
   },
   {
     name: "E-commerce",
     tools: [
-      { name: "Shopify", isPriority: true },
-      { name: "WooCommerce", isPriority: true },
-      { name: "BigCommerce", isPriority: false },
-      { name: "Square", isPriority: false }
+      { name: "Shopify",  },
+      { name: "WooCommerce",  },
+      { name: "BigCommerce",  },
+      { name: "Square",  }
     ]
   },
   {
     name: "Support & Service",
     tools: [
-      { name: "Zendesk", isPriority: true },
-      { name: "Intercom", isPriority: true },
-      { name: "Help Scout", isPriority: false },
-      { name: "Freshdesk", isPriority: false }
+      { name: "Zendesk",  },
+      { name: "Intercom",  },
+      { name: "Help Scout",  },
+      { name: "Freshdesk",  }
     ]
   },
   {
     name: "Scheduling",
     tools: [
-      { name: "Calendly", isPriority: true },
-      { name: "Google Calendar", isPriority: true },
-      { name: "Microsoft Booking", isPriority: false }
+      { name: "Calendly",  },
+      { name: "Google Calendar",  },
+      { name: "Microsoft Booking",  }
     ]
   },
   {
     name: "File Storage & Signing",
     tools: [
-      { name: "DocuSign", isPriority: true },
-      { name: "Google Drive", isPriority: true },
-      { name: "Dropbox", isPriority: false },
-      { name: "Box", isPriority: false }
+      { name: "DocuSign",  },
+      { name: "Google Drive",  },
+      { name: "Dropbox",  },
+      { name: "Box",  }
     ]
   },
   {
     name: "Meeting Intelligence & Transcription",
     tools: [
-      { name: "Fireflies.ai", isPriority: true },
-      { name: "Otter.ai", isPriority: false },
-      { name: "Gong.io", isPriority: false },
-      { name: "Rev.ai", isPriority: false }
+      { name: "Fireflies.ai",  },
+      { name: "Otter.ai",  },
+      { name: "Gong.io",  },
+      { name: "Rev.ai",  }
     ]
   }
 ];

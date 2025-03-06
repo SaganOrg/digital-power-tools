@@ -8,10 +8,19 @@ import { Cart } from "./components/Cart";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AutomationDetail from "./components/AutomationDetail";
+import ClickSpark from '@/components/ui/ClickSpark';
 
 const queryClient = new QueryClient();
 
 const App = () => (
+  <>
+  <ClickSpark
+  sparkColor='#5967d4'
+  sparkSize={10}
+  sparkRadius={15}
+  sparkCount={8}
+  duration={400}
+>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <CartProvider>
@@ -32,6 +41,8 @@ const App = () => (
       </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
+  </ClickSpark>
+  </>
 );
 
 export default App;

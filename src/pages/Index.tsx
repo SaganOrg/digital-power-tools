@@ -1,5 +1,6 @@
 
-import Hero from "@/components/Hero";
+import {Button} from "@heroui/react";
+import Threads from '@/components/ui/Threads';
 import AutomationCard from "@/components/AutomationCard";
 import FeaturedAutomations from "@/components/FeaturedAutomations";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -8,12 +9,19 @@ import { useState, useEffect } from "react";
 import { automations } from "@/data/automations";
 import ChatBot from "@/components/ChatBot";
 import { getUserDataFromUrl } from '@/components/captureLogin';
-
+import { useRef } from "react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/d38kg7nnqsclk9aqeb14qsfkvfvsuruv";
 
 const Index = () => {
 
-   
+  const featuredRef = useRef(null);
+
+  const handleScroll = () => {
+    if (featuredRef.current) {
+      featuredRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
     useEffect(() => {
         const userData = getUserDataFromUrl();
         // console.log("Extracted User Data:", userData);
@@ -64,11 +72,30 @@ const Index = () => {
   // console.log('Filtered Automations:', filteredAutomations);
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <Hero />
-      <div className="max-w-7xl mx-auto">        
+    <>
+    <div className="mt-36">
+    <Threads
+      amplitude={1}
+      distance={0}
+      enableMouseInteraction={true}
+    />
+    </div>
+    <div className="text-center max-w-3xl mx-auto mb-16 px-4">
+      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+        AI-Powered Digital Power Tools
+      </h1>
+      <p className="text-xl text-muted-foreground">
+        Streamline your business operations with intelligent automations that connect your favorite tools and help your team work smarter.
+      </p>
+      <Button color="primary" variant="solid" onPress={handleScroll}
+      className="mt-10 bg-gradient-to-tr from-blue-700 to-blue-400 text-white shadow-lg"
+     >
+        Explore Automations
+      </Button>
+</div>
+    <div ref={featuredRef} style={{ width: '100%', height: '600px', position: 'relative' }}>
+    <div className="max-w-7xl mx-auto mt-96">        
         <FeaturedAutomations automations={featuredAutomations} />
-        
         <div className="mb-8 space-y-4">
           <h3 className="text-lg font-semibold mb-4">Filter by Tools</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -83,7 +110,7 @@ const Index = () => {
                 >
                   <span>{category.name}</span>
                   <span className="text-sm text-muted-foreground">
-                    {expandedCategories.includes(category.name) ? '▼' : '▶'}
+                    {expandedCategories.includes(category.name) ? <ChevronDown /> : <ChevronRight />}
                   </span>
                 </button>
                 
@@ -101,7 +128,6 @@ const Index = () => {
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {tool.name}
-                          {tool.isPriority && " *"}
                         </label>
                       </div>
                     ))}
@@ -120,6 +146,7 @@ const Index = () => {
       </div>
       <ChatBot />
     </div>
+    </>
   );
 };
 
